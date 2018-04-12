@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  altenchallengev1:
+    image: altenchallengev1
+    build:
+      context: .
+      dockerfile: AltenChallengeV1/Dockerfile

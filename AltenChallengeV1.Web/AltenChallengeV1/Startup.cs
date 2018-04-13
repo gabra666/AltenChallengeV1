@@ -8,6 +8,8 @@ using AutoMapper;
 using AltenChallengeV1.Persistence;
 using AltenChallengeV1.Persistence.Repositories;
 using AltenChallengeV1.Persistence.Interfaces;
+using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace AltenChallengeV1
 {
@@ -28,6 +30,11 @@ namespace AltenChallengeV1
             services.AddAutoMapper();
             services.AddMvc();
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "AltenChallenge API", Version = "v1" });
+            });
+
             var connection = @"Server=SESTO-CADIT002;Database=AltenChallengeDB;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<AltenChallengeContext>(options => options.UseSqlServer(connection, b => b.MigrationsAssembly("AltenChallengeV1")));
         }
@@ -38,15 +45,25 @@ namespace AltenChallengeV1
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
-                //{
-                //    HotModuleReplacement = true
-                //});
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true
+                });
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AltenChallenge API V1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseStaticFiles();
 

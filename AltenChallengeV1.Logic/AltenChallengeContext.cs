@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AltenChallengeV1.Model.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace AltenChallengeV1.Model.Models
+namespace AltenChallengeV1.Persistence
 {
     public class AltenChallengeContext : DbContext
     {

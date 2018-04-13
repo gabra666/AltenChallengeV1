@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace AltenChallengeV1.Model.Models
+namespace AltenChallengeV1.DTO
 {
-    public class Customer
+    public class CustomerDTO
     {
         public int CustomerID { get; set; }
         public string CustomerName { get; set; }
@@ -10,6 +10,6 @@ namespace AltenChallengeV1.Model.Models
         public string PostalCode { get; set; }
         public string City { get; set; }
         public string Company { get; set; }
-        public List<Vehicle> Vehicles { get; set; }
+        public List<VehicleDTO> Vehicles { get; set; }
     }
 }

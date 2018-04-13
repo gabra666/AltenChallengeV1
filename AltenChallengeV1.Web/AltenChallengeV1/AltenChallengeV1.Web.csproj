@@ -32,8 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AltenChallengeV1.Logic\AltenChallengeV1.Persistence.csproj" />
     <ProjectReference Include="..\..\AltenChallengeV1.Model\AltenChallengeV1.Model.csproj" />
+    <ProjectReference Include="..\..\AltenChallengeV1.Persistence\AltenChallengeV1.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

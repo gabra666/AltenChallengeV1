@@ -11,30 +11,30 @@ namespace AltenChallengeV1.Persistence.Repositories
 {
     public class VehicleRepository : IVehicleRepository
     {
-        AltenChallengeContext _context;
+        AltenChallengeContext context;
 
         public VehicleRepository(AltenChallengeContext context)
         {
-            this._context = context;
+            this.context = context;
         }
 
         public async Task<Vehicle> GetVehicle(string id)
         {
-            return await _context.Vehicles.FirstOrDefaultAsync(vehicle => vehicle.VehicleID == id);
+            return await context.Vehicles.FirstOrDefaultAsync(vehicle => vehicle.VehicleID == id);
         }
 
         public void Save(Vehicle vehicle)
         {
-            _context.Add(vehicle);
+            context.Add(vehicle);
         }
 
         public void Delete(Vehicle vehicle)
         {
-            _context.Remove(vehicle);
+            context.Remove(vehicle);
         }
 
         public async Task<List<Vehicle>> GetVehicles(){
-            return await _context.Vehicles.ToListAsync();
+            return await context.Vehicles.ToListAsync();
         }
 
         //public async Task<QueryResult<Customer>> GetVehicles(CustomerQuery queryObj)

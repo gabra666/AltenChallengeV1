@@ -9,7 +9,7 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AltenChallengeV1.Model", "..\AltenChallengeV1.Model\AltenChallengeV1.Model.csproj", "{451627C3-62F9-47C6-A5E9-CBC88126BF09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AltenChallengeV1.Persistence", "..\AltenChallengeV1.Logic\AltenChallengeV1.Persistence.csproj", "{C6BAAFF0-7C75-461B-AD47-A6A85F2CDC85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AltenChallengeV1.Persistence", "..\AltenChallengeV1.Persistence\AltenChallengeV1.Persistence.csproj", "{5B30C301-48C1-4A2E-96D5-1899487FEAAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{451627C3-62F9-47C6-A5E9-CBC88126BF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{451627C3-62F9-47C6-A5E9-CBC88126BF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{451627C3-62F9-47C6-A5E9-CBC88126BF09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6BAAFF0-7C75-461B-AD47-A6A85F2CDC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6BAAFF0-7C75-461B-AD47-A6A85F2CDC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6BAAFF0-7C75-461B-AD47-A6A85F2CDC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6BAAFF0-7C75-461B-AD47-A6A85F2CDC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B30C301-48C1-4A2E-96D5-1899487FEAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B30C301-48C1-4A2E-96D5-1899487FEAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B30C301-48C1-4A2E-96D5-1899487FEAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B30C301-48C1-4A2E-96D5-1899487FEAAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

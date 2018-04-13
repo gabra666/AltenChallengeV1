@@ -11,30 +11,30 @@ namespace AltenChallengeV1.Persistence.Repositories
 {
     public class CustomerRepository : ICustomerRepository
     {
-        AltenChallengeContext _context;
+        AltenChallengeContext context;
 
         public CustomerRepository(AltenChallengeContext context)
         {
-            this._context = context;
+            this.context = context;
         }
 
         public async Task<Customer> GetCustomer(int id)
         {
-            return await _context.Customers.FirstOrDefaultAsync(customer => customer.CustomerID == id);
+            return await context.Customers.FirstOrDefaultAsync(customer => customer.CustomerID == id);
         }
 
         public void Save(Customer customer)
         {
-            _context.Add(customer);
+            context.Add(customer);
         }
 
         public void Delete(Customer customer)
         {
-            _context.Remove(customer);
+            context.Remove(customer);
         }
 
         public async Task<List<Customer>> GetCustomers(){
-            return await _context.Customers.ToListAsync();
+            return await context.Customers.ToListAsync();
         }
 
         //public async Task<QueryResult<Customer>> GetVehicles(CustomerQuery queryObj)

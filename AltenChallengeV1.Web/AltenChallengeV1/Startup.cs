@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using AltenChallengeV1.Persistence;
+using AltenChallengeV1.Persistence.Repositories;
+using AltenChallengeV1.Persistence.Interfaces;
 
 namespace AltenChallengeV1
 {
@@ -21,6 +23,8 @@ namespace AltenChallengeV1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper();
             services.AddMvc();
 
